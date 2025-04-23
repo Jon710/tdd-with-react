@@ -1,10 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './CarouselSlide.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import Carousel from "./Carousel.tsx";
 
-createRoot(document.getElementById('root')!).render(
+const slides = [
+  {
+    imgUrl: "https://example.com/image1.jpg",
+    description: "Image 1",
+    attribution: "John Doe",
+  },
+];
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <Carousel slides={slides} />
+  </StrictMode>
+);

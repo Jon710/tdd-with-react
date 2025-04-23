@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef } from "react";
+import { ComponentPropsWithRef, ReactNode } from "react";
 
 function CarouselSlide({
   imgUrl,
@@ -7,14 +7,14 @@ function CarouselSlide({
   ...rest
 }: {
   imgUrl?: string;
-  description?: string;
-  attribution?: string;
+  description?: ReactNode;
+  attribution?: ReactNode;
 } & ComponentPropsWithRef<"figure">) {
   return (
     <figure {...rest}>
       <img src={imgUrl} />
       <figcaption data-testid="caption">
-        {description} {attribution}
+        <strong>{description}</strong> {attribution}
       </figcaption>
     </figure>
   );
