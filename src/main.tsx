@@ -8,6 +8,16 @@ const slides = [
     description: "Image 1",
     attribution: "John Doe",
   },
+  {
+    imgUrl: "https://example.com/image2.jpg",
+    description: "Image 2",
+    attribution: "Jane Doe",
+  },
+  {
+    imgUrl: "https://example.com/image3.jpg",
+    description: "Image 3",
+    attribution: "Jane Tolo",
+  },
 ];
 
 createRoot(document.getElementById("root")!).render(
