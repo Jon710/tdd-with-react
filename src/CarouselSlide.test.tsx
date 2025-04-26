@@ -2,6 +2,11 @@ import { render, screen } from "@testing-library/react";
 import CarouselSlide from "./CarouselSlide";
 
 describe("CarouselSlide component", () => {
+  it("matches the snapshot", () => {
+    render(<CarouselSlide />);
+    expect(screen.getByRole("figure")).toMatchSnapshot();
+  });
+
   it("renders a figure element", () => {
     render(<CarouselSlide />);
     const figure = screen.getByRole("figure");
@@ -15,7 +20,6 @@ describe("CarouselSlide component", () => {
   it("passes imgUrl thru to the <img>", () => {
     const imgUrl = "https://example.com/image.jpg";
     render(<CarouselSlide imgUrl={imgUrl} />);
-
     expect(screen.getByRole("img")).toHaveAttribute("src", imgUrl);
   });
 
