@@ -24,10 +24,6 @@ function Carousel({ slides, defaultImgHeight }: CarouselProps) {
         onClick={() => {
           if (!slides) return;
           setSlideIndex((i) => (i + slides.length - 1) % slides.length);
-          // setSlideIndex((prevIndex) => {
-          //   const nextIndex = prevIndex + 1;
-          //   return nextIndex >= slides.length ? 0 : nextIndex;
-          // });
         }}
       >
         Prev
